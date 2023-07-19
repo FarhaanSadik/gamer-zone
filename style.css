@@ -22,6 +22,18 @@
     color:white;
 }
 
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding:20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav>div>span{
+    margin: 0 15px;
+}
+
+
 main>div{
     /* border: 2px solid red; */
 }
@@ -66,19 +78,16 @@ main>div>div{
 /* online games */
 .online-games-card-container{
     display: flex;
-    border:1px solid red;
     justify-content: center;
     align-items: center;
+    max-width: 1000px;
 }
 
 .online-games-card-container>div{
 
 }
-@media only screen and (max-width: 768px) {
-    .online-games-card-container{
-        flex-direction: column;
-    }
-}
+
+
 
 /* play instant */
 .ads-container>div{
@@ -103,20 +112,44 @@ main>div>div{
 }
 
 
-/* career */
-.career-container{
+/* game data  */
+.gamedata-container{
     display: flex;
+    justify-content: center;
 }
-
-@media only screen and (max-width: 768px) {
-    .career-container{
-        flex-direction: column;
-    }   
+.gamedata{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.gamedata-items{
+    border:1px solid #d3d3d3;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border-radius:46px;
+    padding: 0 10px 0 0;
+    margin:0px auto;
 }
 
 
 /* banner */
 @media only screen and (max-width: 768px) {
+    nav{
+        flex-direction: column;
+    }
+    nav>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav>div>span{
+        margin: 10px 0;
+    }
+
     .banner-container>div{
         flex-direction: column-reverse;
     }
@@ -129,5 +162,12 @@ main>div>div{
     .banner-2-text{
         text-align:center;
         padding: 0 100px;
+    }
+}
+
+/* online games  */
+@media only screen and (max-width: 768px) {
+    .online-games-card-container{
+        flex-direction: column;
     }
 }
