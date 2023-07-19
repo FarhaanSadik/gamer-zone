@@ -33,10 +33,6 @@ nav>div>span{
     margin: 0 15px;
 }
 
-
-main>div{
-    /* border: 2px solid red; */
-}
 main>div>div{
     margin: auto;
     /* max-width: 1200px; */
@@ -47,13 +43,9 @@ main>div>div{
     display: flex;
     align-items: center;
     flex-direction: row;
+    padding: 20px;
 }
 
-.banner-1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .banner-1>div:first-child{
     display: flex;
     align-items: center;
@@ -61,6 +53,8 @@ main>div>div{
     padding:150px 0px;
     background: url('/images/Group_14.png');
     margin:0 100px 0 0;
+    background-repeat: no-repeat;
+    background-size: contain
 ;}
 .banner-1>div{
     width: 100%;
@@ -80,7 +74,13 @@ main>div>div{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
+    max-width: 900px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .online-games-card-container>div{
@@ -92,25 +92,12 @@ main>div>div{
 /* play instant */
 .ads-container>div{
     display: flex;
+    width: 80%;
 }
-.ads-container>div>div{
-  
+.ads-text{
+    width: 60%;
+    margin:50px 0;
 }
-
-
-@media only screen and (max-width: 768px) {
-    .ads-play-2{
-        flex-direction: column-reverse;
-    } 
-    .ads-play-1{
-        flex-direction: column;
-    }
-      
-    /* .ads-container>div{
-        flex-direction: column;
-    } */
-}
-
 
 /* game data  */
 .gamedata-container{
@@ -137,7 +124,9 @@ main>div>div{
 
 
 /* banner */
+
 @media only screen and (max-width: 768px) {
+    /* nav  */
     nav{
         flex-direction: column;
     }
@@ -150,12 +139,20 @@ main>div>div{
         margin: 10px 0;
     }
 
-    .banner-container>div{
+    /* banner */
+    .banner-container>div:first-child{
         flex-direction: column-reverse;
     }
-    .banner-2{
+    .banner-container>div:nth-child(2) {
         flex-direction: column;
     }
+    .banner-2 img{
+        width: 100%;
+    }
+    .banner-2{
+        background: transparent;
+    }
+
     .banner-1>div:first-child{
         margin:0;
     }
@@ -163,11 +160,21 @@ main>div>div{
         text-align:center;
         padding: 0 100px;
     }
-}
 
-/* online games  */
-@media only screen and (max-width: 768px) {
     .online-games-card-container{
         flex-direction: column;
     }
+
+    .ads-play-2{
+        flex-direction: column-reverse;
+    } 
+    .ads-play-1{
+        flex-direction: column;
+    }
+    .ads-text{
+        text-align: center;
+        width:80%;
+    }
+  
+
 }
