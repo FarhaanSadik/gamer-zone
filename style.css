@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --primary: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    --secondary: #4EC5F7;
+    --mix: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+}
+
+.text-mix-color{
+    background: var(--mix); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn{
+    border:none;
+    padding: 10px 25px;
+    border-radius: 48px;
+    background-color: transparent;
+    color:white;
+}
+
+main>div{
+    /* border: 2px solid red; */
+}
+main>div>div{
+    margin: auto;
+    /* max-width: 1200px; */
+}
+
+/* banner */
+.banner-container>div{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.banner-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-1>div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:150px 0px;
+    background: url('/images/Group_14.png');
+    margin:0 100px 0 0;
+;}
+.banner-1>div{
+    width: 100%;
+}
+
+.banner-2-text{
+    text-align: right; 
+    padding:0 100px 0;
+}
+.banner-2{
+    background:linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
+
+
+/* online games */
+.online-games-card-container{
+    display: flex;
+    border:1px solid red;
+    justify-content: center;
+    align-items: center;
+}
+
+.online-games-card-container>div{
+
+}
+@media only screen and (max-width: 768px) {
+    .online-games-card-container{
+        flex-direction: column;
+    }
+}
+
+/* play instant */
+.ads-container>div{
+    display: flex;
+}
+.ads-container>div>div{
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+    .ads-play-2{
+        flex-direction: column-reverse;
+    } 
+    .ads-play-1{
+        flex-direction: column;
+    }
+      
+    /* .ads-container>div{
+        flex-direction: column;
+    } */
+}
+
+
+/* career */
+.career-container{
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .career-container{
+        flex-direction: column;
+    }   
+}
+
+
+/* banner */
+@media only screen and (max-width: 768px) {
+    .banner-container>div{
+        flex-direction: column-reverse;
+    }
+    .banner-2{
+        flex-direction: column;
+    }
+    .banner-1>div:first-child{
+        margin:0;
+    }
+    .banner-2-text{
+        text-align:center;
+        padding: 0 100px;
+    }
+}
